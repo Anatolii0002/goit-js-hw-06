@@ -1,10 +1,9 @@
-const categoriesList = document.querySelector("#categories");
-const categoriesItems = categoriesList.querySelectorAll(".item");
+const listItems = document.querySelector("#categories");
+const count = listItems.length;
 
-console.log(В сспику ${categoriesItems.length} категорії.);
+console.log('Number of categories: ${count}');
 
-categoriesItems.forEach(item => {
-const heading = item.querySelector("h2").textContent;
-const itemsLength = item.querySelectorAll("li").length;
-console.log(Категорія: ${heading} \nКількість елементів: ${itemsLength});
+listItems.forEach(item => {
+console.log('Category: ${item.querySelector("h2").textContent}');
+console.log('Elements: ${item.querySelectorAll("li").length}');
 });
